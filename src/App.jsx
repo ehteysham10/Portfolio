@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion, useScroll } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -10,6 +11,7 @@ import Stats from "./components/Stats";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     if (isDarkMode) {
@@ -22,7 +24,11 @@ function App() {
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300 relative">
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1.5 bg-blue-500 origin-left z-[100]"
+        style={{ scaleX: scrollYProgress }}
+      />
       <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <Hero />
       <About />
