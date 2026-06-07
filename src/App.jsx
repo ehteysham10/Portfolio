@@ -1,0 +1,38 @@
+import { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Stats from "./components/Stats";
+
+function App() {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+
+  return (
+    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-black dark:text-white transition-colors duration-300">
+      <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+      <Stats />
+    </div>
+  );
+}
+
+export default App;
