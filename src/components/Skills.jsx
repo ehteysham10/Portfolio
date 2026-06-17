@@ -13,9 +13,9 @@ const skillGroups = [
         skills: ["Node.js", "Express.js", "REST APIs", "JWT", "OAuth"],
     },
     {
-        title: "Database",
+        title: "Database and Deployment",
         icon: Database,
-        skills: ["MongoDB", "PostgreSQL", "Mongoose"],
+        skills: ["MongoDB", "PostgreSQL", "Mongoose", "Vercel", "Render"],
     },
     {
         title: "Tools",
