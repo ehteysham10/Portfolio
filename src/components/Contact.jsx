@@ -18,7 +18,7 @@ function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="max-w-7xl mx-auto px-6 py-24"
+            className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24"
         >
             <div className="mb-10">
                 <span className="text-sm text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 px-4 py-2 rounded-full">
@@ -26,11 +26,11 @@ function Contact() {
                 </span>
             </div>
 
-            <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-white">
                 Let's Build Something Great
             </h2>
 
-            <p className="text-gray-600 dark:text-zinc-400 max-w-2xl mb-10">
+            <p className="text-gray-700 dark:text-zinc-400 max-w-2xl mb-8 sm:mb-10 text-sm sm:text-base">
                 I'm currently open to junior
                 developer opportunities. Feel free to reach out.
             </p>
@@ -38,7 +38,7 @@ function Contact() {
             <div className="flex flex-col gap-4">
                 <a
                     href="mailto:iamehtisham10@gmail.com"
-                    className="text-lg text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                    className="text-base sm:text-lg text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors break-all"
                 >
                     📧 iamehtisham10@gmail.com
                 </a>

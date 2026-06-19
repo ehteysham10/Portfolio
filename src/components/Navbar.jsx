@@ -7,76 +7,59 @@ function Navbar({ toggleTheme, isDarkMode }) {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/70 dark:bg-black/70 border-b border-gray-200 dark:border-zinc-800 transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                    Ehtasham<span className="text-blue-500">.</span>
+        <nav className="sticky top-0 z-50 transition-colors duration-300
+                        backdrop-blur-xl bg-white/40 dark:bg-black/40
+                        shadow-[0_4px_30px_rgba(0,0,0,0.03)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.2)]">
+            {/* Gradient border bottom */}
+            <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 dark:via-blue-400/20 to-transparent" />
+            
+            <div className="relative max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white drop-shadow-sm">
+                    Ehtasham<span className="text-blue-500 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">.</span>
                 </h1>
 
-                <ul className="hidden md:flex gap-8 text-gray-600 dark:text-gray-300 items-center">
-                    <li>
-                        <a href="#about" className="hover:text-blue-500 dark:hover:text-blue-400 hover:scale-105 transition">
-                            About
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#skills" className="hover:text-blue-500 dark:hover:text-blue-400 hover:scale-105 transition">
-                            Skills
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#projects" className="hover:text-blue-500 dark:hover:text-blue-400 hover:scale-105 transition">
-                            Projects
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#contact" className="hover:text-blue-500 dark:hover:text-blue-400 hover:scale-105 transition">
-                            Contact
-                        </a>
-                    </li>
-                    <li>
-                        <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-zinc-800 transition">
+                <ul className="hidden md:flex gap-2 text-gray-700 dark:text-gray-300 items-center font-medium">
+                    {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                        <li key={item}>
+                            <a 
+                                href={`#${item.toLowerCase()}`} 
+                                className="px-4 py-2 rounded-full hover:bg-white/60 dark:hover:bg-white/10 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 inline-block"
+                            >
+                                {item}
+                            </a>
+                        </li>
+                    ))}
+                    <li className="ml-2">
+                        <button onClick={toggleTheme} className="p-2 rounded-full bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm">
                             {isDarkMode ? '☀️' : '🌙'}
                         </button>
                     </li>
                 </ul>
                 <div className="md:hidden flex items-center gap-4">
-                    <button onClick={toggleTheme} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-zinc-800 transition text-2xl">
+                    <button onClick={toggleTheme} className="p-2 rounded-full bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm text-xl">
                         {isDarkMode ? '☀️' : '🌙'}
                     </button>
-                    <button onClick={toggleMenu} className="p-2 text-gray-900 dark:text-white rounded-full hover:bg-gray-200 dark:hover:bg-zinc-800 transition">
-                        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    <button onClick={toggleMenu} className="p-2 text-gray-900 dark:text-white rounded-full bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm">
+                        {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                     </button>
                 </div>
             </div>
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden border-t border-gray-200 dark:border-zinc-800 bg-white/90 dark:bg-black/90 backdrop-blur-md absolute w-full left-0 shadow-lg">
-                    <ul className="flex flex-col px-6 py-4 space-y-4 text-gray-600 dark:text-gray-300 font-medium">
-                        <li>
-                            <a href="#about" onClick={toggleMenu} className="block hover:text-blue-500 dark:hover:text-blue-400 transition">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#skills" onClick={toggleMenu} className="block hover:text-blue-500 dark:hover:text-blue-400 transition">
-                                Skills
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#projects" onClick={toggleMenu} className="block hover:text-blue-500 dark:hover:text-blue-400 transition">
-                                Projects
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact" onClick={toggleMenu} className="block hover:text-blue-500 dark:hover:text-blue-400 transition">
-                                Contact
-                            </a>
-                        </li>
+                <div className="md:hidden absolute top-full left-0 w-full backdrop-blur-xl bg-white/80 dark:bg-black/80 border-b border-gray-200/50 dark:border-zinc-800/50 shadow-xl">
+                    <ul className="flex flex-col px-4 py-4 space-y-2 text-gray-700 dark:text-gray-300 font-medium">
+                        {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                            <li key={item}>
+                                <a 
+                                    href={`#${item.toLowerCase()}`} 
+                                    onClick={toggleMenu} 
+                                    className="block px-4 py-3 rounded-xl hover:bg-white/60 dark:hover:bg-white/10 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300"
+                                >
+                                    {item}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             )}

@@ -10,18 +10,18 @@ function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="max-w-7xl mx-auto px-6 py-24"
+            className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24"
         >
             <div className="mb-12">
                 <p className="text-blue-500 mb-2 tracking-widest uppercase text-sm">
                     Projects
                 </p>
 
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                     Featured Work
                 </h2>
             </div>
-            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
                 {projects.map((project) => (
                     <ProjectCard
                         key={project.id}
