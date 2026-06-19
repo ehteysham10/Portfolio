@@ -50,8 +50,8 @@ function About() {
           {/* Gradient top-edge highlight */}
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400/60 dark:via-blue-400/40 to-transparent" />
 
-          {/* Content grid */}
-          <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-start">
+          {/* Content */}
+          <div>
 
             {/* ── Bio text ── */}
             <div className="space-y-4">
@@ -74,29 +74,6 @@ function About() {
                 efficient database design, and continuously improving my development skills
                 through practical projects.
               </p>
-            </div>
-
-            {/* ── Quick-facts pill column ── */}
-            <div className="flex md:flex-col flex-row flex-wrap gap-3 md:min-w-[160px]">
-              {[
-                { icon: "🌍", label: "Lahore, PK" },
-                { icon: "🎓", label: "BSIT Graduate" },
-                { icon: "💼", label: "Open to Work" },
-                { icon: "🛠️", label: "Full Stack" },
-              ].map(({ icon, label }) => (
-                <div
-                  key={label}
-                  className="flex items-center gap-2 px-4 py-2 rounded-xl
-                             bg-white/70 dark:bg-white/5
-                             border border-white/90 dark:border-white/10
-                             backdrop-blur-sm
-                             text-sm font-medium text-gray-800 dark:text-zinc-300
-                             shadow-sm"
-                >
-                  <span>{icon}</span>
-                  <span>{label}</span>
-                </div>
-              ))}
             </div>
           </div>
 

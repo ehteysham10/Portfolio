@@ -1,21 +1,21 @@
 import { useRef } from "react";
 import { motion, useSpring } from "framer-motion";
-import { Download, Mail } from "lucide-react";
+import { Download, Mail, CheckCircle2 } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
 
 /* ── Animated code lines ─────────────────────────────────── */
 const codeLines = [
-  { text: 'const developer = {',         color: 'text-blue-600 dark:text-blue-300' },
-  { text: '  name: "Ehtasham Ul Haq",',  color: 'text-green-700 dark:text-green-400' },
-  { text: '  role: "Full Stack Dev",',   color: 'text-green-700 dark:text-green-400' },
+  { text: 'const developer = {', color: 'text-blue-600 dark:text-blue-300' },
+  { text: '  name: "Ehtasham Ul Haq",', color: 'text-green-700 dark:text-green-400' },
+  { text: '  role: "Full Stack Dev",', color: 'text-green-700 dark:text-green-400' },
   { text: '  focus: "Backend Systems",', color: 'text-green-700 dark:text-green-400' },
-  { text: '  stack: [',                  color: 'text-blue-600 dark:text-blue-300' },
-  { text: '    "React", "Node.js",',     color: 'text-amber-600 dark:text-yellow-400' },
-  { text: '    "Express", "MongoDB",',   color: 'text-amber-600 dark:text-yellow-400' },
-  { text: '    "PostgreSQL"',            color: 'text-amber-600 dark:text-yellow-400' },
-  { text: '  ],',                        color: 'text-blue-600 dark:text-blue-300' },
-  { text: '  openToWork: true 🟢',       color: 'text-emerald-600 dark:text-emerald-400' },
-  { text: '};',                          color: 'text-blue-600 dark:text-blue-300' },
+  { text: '  stack: [', color: 'text-blue-600 dark:text-blue-300' },
+  { text: '    "React", "Node.js",', color: 'text-amber-600 dark:text-yellow-400' },
+  { text: '    "Express", "MongoDB",', color: 'text-amber-600 dark:text-yellow-400' },
+  { text: '    "PostgreSQL"', color: 'text-amber-600 dark:text-yellow-400' },
+  { text: '  ],', color: 'text-blue-600 dark:text-blue-300' },
+  { text: '  openToWork: true ', icon: <CheckCircle2 className="w-3.5 h-3.5 inline ml-1 align-text-bottom" />, color: 'text-emerald-600 dark:text-emerald-400' },
+  { text: '};', color: 'text-blue-600 dark:text-blue-300' },
 ];
 
 const codeContainerVariants = {
@@ -123,7 +123,7 @@ function Hero() {
                          text-gray-800 dark:text-zinc-400 mt-3 sm:mt-4
                          min-h-[2rem] sm:min-h-[2.5rem]">
             <Typewriter
-              words={["Full Stack Developer", "Backend Engineer", "MERN Stack Developer"]}
+              words={["Full Stack Developer", "MERN Stack Developer"]}
               loop={0}
               cursor
               cursorStyle="|"
@@ -227,11 +227,11 @@ function Hero() {
 
             {/* Glow behind image */}
             <div className="orbit-glow absolute rounded-full bg-blue-500/20 dark:bg-blue-500/15"
-                 style={{ inset: "20px" }} />
+              style={{ inset: "20px" }} />
 
             {/* Profile photo */}
             <div className="absolute rounded-full overflow-hidden border-4 border-blue-500/30 shadow-2xl group"
-                 style={{ inset: "20px" }}>
+              style={{ inset: "20px" }}>
               <img
                 src="/Hero.jpg"
                 onError={(e) => {
@@ -274,6 +274,7 @@ function Hero() {
             {codeLines.map((line, i) => (
               <motion.div key={i} variants={codeLineVariants} className={line.color}>
                 {line.text}
+                {line.icon && line.icon}
               </motion.div>
             ))}
           </motion.pre>

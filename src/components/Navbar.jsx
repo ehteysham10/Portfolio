@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 function Navbar({ toggleTheme, isDarkMode }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,13 +31,13 @@ function Navbar({ toggleTheme, isDarkMode }) {
                     ))}
                     <li className="ml-2">
                         <button onClick={toggleTheme} className="p-2 rounded-full bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm">
-                            {isDarkMode ? '☀️' : '🌙'}
+                            {isDarkMode ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-slate-700 dark:text-slate-300" />}
                         </button>
                     </li>
                 </ul>
                 <div className="md:hidden flex items-center gap-4">
                     <button onClick={toggleTheme} className="p-2 rounded-full bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm text-xl">
-                        {isDarkMode ? '☀️' : '🌙'}
+                        {isDarkMode ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-slate-700 dark:text-slate-300" />}
                     </button>
                     <button onClick={toggleMenu} className="p-2 text-gray-900 dark:text-white rounded-full bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-sm">
                         {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

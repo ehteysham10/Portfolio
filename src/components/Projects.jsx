@@ -10,8 +10,11 @@ function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24"
+            className="relative max-w-7xl mx-auto px-4 sm:px-6 py-14 sm:py-20 md:py-24 border-t border-gray-200 dark:border-zinc-900 transition-colors duration-300"
         >
+            {/* Ambient glowing background orbs */}
+            <div className="absolute top-1/4 left-1/3 w-72 h-72 rounded-full bg-blue-500/10 dark:bg-blue-500/5 blur-3xl pointer-events-none" />
+            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-purple-500/10 dark:bg-purple-500/5 blur-3xl pointer-events-none" />
             <div className="mb-12">
                 <p className="text-blue-500 mb-2 tracking-widest uppercase text-sm">
                     Projects
