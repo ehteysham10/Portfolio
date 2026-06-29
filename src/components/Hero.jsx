@@ -171,8 +171,8 @@ function Hero() {
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur opacity-60 group-hover:opacity-100 transition duration-700 animate-pulse" />
               <MagneticButton
-                href="/resume.pdf"
-                download="Ehtisham_Ul_Haq_Resume.pdf"
+                href="/Ehtisham's_resume.pdf"
+                download="Ehtisham's_resume.pdf"
                 className="relative flex items-center gap-2
                            bg-white dark:bg-zinc-950
                            border border-blue-500/50 text-blue-600 dark:text-blue-400

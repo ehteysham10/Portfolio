@@ -14,6 +14,22 @@ export const projects = [
     },
     {
         id: 2,
+        title: "PulseTriage",
+        description:
+            "A premium AI-driven multi-agent support ticket triage system featuring real-time communication via Socket.io, active agent collision prevention, and a high-performance SLA escalation engine powered by Redis & BullMQ.",
+        tech: [
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Socket.io",
+            "Redis",
+            "BullMQ"
+        ],
+        demo: "https://pulse-triage-blond.vercel.app/"
+    },
+    {
+        id: 3,
         title: "E-Learning Platform",
         description:
             "A full-stack learning platform featuring JWT & Google OAuth authentication, role-based access control, course/quiz management, trackable enrollments, Cloudinary-based file uploads, and automated email notifications.",
@@ -28,19 +44,5 @@ export const projects = [
             "Nodemailer"
         ],
         github: "https://github.com/ehteysham10/E-Learning-Platform"
-    },
-    {
-        id: 3,
-        title: "Running Tribe",
-        description:
-            "Community platform for runners featuring real-time chat, Stripe payments, event management, and premium memberships.",
-        tech: [
-
-            "Node.js",
-            "MongoDB",
-            "Socket.IO",
-            "Stripe"
-        ],
-        github: "https://github.com/ehteysham10/running-tribe"
     }
 ];

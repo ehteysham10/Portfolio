@@ -164,12 +164,12 @@ const categories = [
   {
     id: "frontend",
     label: "Frontend",
-    skills: ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS"],
+    skills: ["React", "JavaScript", "HTML5", "CSS3", "Tailwind CSS"],
   },
   {
     id: "backend",
     label: "Backend",
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT", "OAuth"],
+    skills: ["TypeScript", "Node.js", "Express.js", "REST APIs", "JWT", "OAuth"],
   },
   {
     id: "database",
@@ -190,21 +190,21 @@ function SkillLogo({ name }) {
     <motion.div
       whileHover={{ y: -6, scale: 1.05 }}
       transition={{ type: "spring", stiffness: 350, damping: 20 }}
-      className="flex flex-col items-center gap-3 p-4 rounded-2xl
+      className="flex flex-col items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 rounded-2xl
                  bg-white dark:bg-zinc-900
                  border border-gray-200/80 dark:border-zinc-800
                  hover:border-blue-400 dark:hover:border-blue-500
                  shadow-sm hover:shadow-lg hover:shadow-blue-500/10
-                 transition-shadow duration-300 cursor-default group"
+                 transition-shadow duration-300 cursor-default group h-full"
     >
-      <div className="w-12 h-12 flex items-center justify-center
+      <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center
                       rounded-xl bg-gray-50 dark:bg-zinc-800
                       group-hover:bg-blue-50 dark:group-hover:bg-blue-500/10
                       transition-colors duration-200">
         {logo ? (
-          <div className="w-8 h-8">{logo}</div>
+          <div className="w-6 h-6 sm:w-8 sm:h-8">{logo}</div>
         ) : (
-          <span className="text-2xl font-bold text-blue-500">{name[0]}</span>
+          <span className="text-xl sm:text-2xl font-bold text-blue-500">{name[0]}</span>
         )}
       </div>
       <span className="text-xs font-medium text-gray-700 dark:text-zinc-400 text-center leading-tight">
@@ -275,6 +275,7 @@ function Skills() {
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.05, duration: 0.25 }}
+              className="h-full"
             >
               <SkillLogo name={skill} />
             </motion.div>
