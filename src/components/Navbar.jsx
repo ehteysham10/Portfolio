@@ -19,7 +19,7 @@ function Navbar({ toggleTheme, isDarkMode }) {
                 </h1>
 
                 <ul className="hidden md:flex gap-2 text-gray-700 dark:text-gray-300 items-center font-medium">
-                    {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                    {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
                         <li key={item}>
                             <a 
                                 href={`#${item.toLowerCase()}`} 
@@ -49,7 +49,7 @@ function Navbar({ toggleTheme, isDarkMode }) {
             {isOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full backdrop-blur-xl bg-white/80 dark:bg-black/80 border-b border-gray-200/50 dark:border-zinc-800/50 shadow-xl">
                     <ul className="flex flex-col px-4 py-4 space-y-2 text-gray-700 dark:text-gray-300 font-medium">
-                        {['About', 'Skills', 'Projects', 'Contact'].map((item) => (
+                        {['About', 'Experience', 'Skills', 'Projects', 'Contact'].map((item) => (
                             <li key={item}>
                                 <a 
                                     href={`#${item.toLowerCase()}`} 

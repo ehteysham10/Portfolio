@@ -7,12 +7,12 @@ import { Typewriter } from "react-simple-typewriter";
 const codeLines = [
   { text: 'const developer = {', color: 'text-blue-600 dark:text-blue-300' },
   { text: '  name: "Ehtasham Ul Haq",', color: 'text-green-700 dark:text-green-400' },
-  { text: '  role: "Full Stack Dev",', color: 'text-green-700 dark:text-green-400' },
+  { text: '  role: "MERN Stack Developer",', color: 'text-green-700 dark:text-green-400' },
   { text: '  focus: "Backend Systems",', color: 'text-green-700 dark:text-green-400' },
   { text: '  stack: [', color: 'text-blue-600 dark:text-blue-300' },
   { text: '    "React", "Node.js",', color: 'text-amber-600 dark:text-yellow-400' },
   { text: '    "Express", "MongoDB",', color: 'text-amber-600 dark:text-yellow-400' },
-  { text: '    "PostgreSQL"', color: 'text-amber-600 dark:text-yellow-400' },
+  { text: '    "TypeScript", "PostgreSQL"', color: 'text-amber-600 dark:text-yellow-400' },
   { text: '  ],', color: 'text-blue-600 dark:text-blue-300' },
   { text: '  openToWork: true ', icon: <CheckCircle2 className="w-3.5 h-3.5 inline ml-1 align-text-bottom" />, color: 'text-emerald-600 dark:text-emerald-400' },
   { text: '};', color: 'text-blue-600 dark:text-blue-300' },
@@ -136,9 +136,9 @@ function Hero() {
           <p className="max-w-xl mx-auto md:mx-0 mt-4 sm:mt-6
                         text-gray-700 dark:text-zinc-400
                         text-sm sm:text-base leading-7">
-            Full Stack Developer specializing in backend systems using Node.js, Express.js,
-            MongoDB, and PostgreSQL. I build secure APIs, authentication systems,
-            real-time applications, and modern React frontends.
+            Junior MERN Stack Developer with 6+ months of professional experience building
+            production-grade backend systems, RESTful APIs, JWT/OAuth auth, real-time
+            WebSocket apps, and modern React frontends.
           </p>
 
           {/* CTA Buttons */}
