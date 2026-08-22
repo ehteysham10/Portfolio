@@ -10,6 +10,10 @@ export const projects = [
             "JWT",
             "Stripe"
         ],
+        github: {
+            frontend: "https://github.com/ehteysham10/ShopNpay-Frontend-",
+            backend: "https://github.com/ehteysham10/ShopNpay-Backend-"
+        },
         demo: "https://shopnpay.vercel.app/"
     },
     {
@@ -26,13 +30,39 @@ export const projects = [
             "Redis",
             "BullMQ"
         ],
+        github: {
+            frontend: "https://github.com/ehteysham10/PulseTriage-Frontend",
+            backend: "https://github.com/ehteysham10/PulseTriage-Backend"
+        },
         demo: "https://pulse-triage-blond.vercel.app/"
     },
     {
         id: 3,
+        title: "Talk&See",
+        description: "A full-stack real-time communication platform featuring peer-to-peer WebRTC video & audio calls, live chat with typing indicators, JWT authentication with email verification, and a premium glassmorphic UI powered by React, Zustand, and Socket.io.",
+        tech: [
+            "React",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "Socket.io",
+            "WebRTC",
+            "MongoDB",
+            "JWT",
+            "Zustand"
+        ],
+        github: {
+            frontend: "https://github.com/ehteysham10/talk-see-Frontend",
+            backend: "https://github.com/ehteysham10/talk-see-Backend"
+        },
+        demo: "https://talkandsee.vercel.app/login",
+        inProgress: true
+    },
+    {
+        id: 4,
         title: "E-Learning Platform",
         description:
-            "A full-stack learning platform featuring JWT & Google OAuth authentication, role-based access control, course/quiz management, trackable enrollments, Cloudinary-based file uploads, and automated email notifications.",
+            "A backend learning platform featuring JWT & Google OAuth authentication, role-based access control, course/quiz management, trackable enrollments, Cloudinary-based file uploads, and automated email notifications.",
         tech: [
 
             "Node.js",
